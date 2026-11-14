@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Prueba con JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prueba de HTML y JavaScript</h1>
+        <p id="mensaje">Haz clic en el botón para ejecutar el código JavaScript.</p>
+        <button onclick="ejecutarPrueba()">Ejecutar JavaScript</button>
+    </div>
+
+    <!-- El código JavaScript se incluye directamente usando la etiqueta <script> -->
+    <script>
+        function ejecutarPrueba() {
+            // Seleccionamos el elemento <p> por su ID
+            const elementoMensaje = document.getElementById('mensaje');
+            
+            // Modificamos el contenido y el estilo del texto
+            elementoMensaje.textContent = '¡El código JavaScript integrado funciona correctamente!';
+            elementoMensaje.style.color = 'green';
+            elementoMensaje.style.fontWeight = 'bold';
+            
+            // Mostramos una alerta en el navegador
+            alert('¡Acción ejecutada desde JavaScript!');
+        }
+    </script>
+
+</body>
+</html>
